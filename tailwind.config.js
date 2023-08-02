@@ -38,6 +38,7 @@ module.exports = {
 
       screens: {
         'small-lg': '990px',
+        'small-sm': '485px',
       },
 
       transitionTimingFunction: {

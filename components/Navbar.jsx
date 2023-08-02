@@ -12,8 +12,8 @@ const Navbar = ({ hasScrolled }) => {
   };
 
   return (
-    <div className="w-full group ">
-      <div className="max-w-[1340px] py-[10px] justify-between z-10 h-[78.8px] mx-auto w-[90%] flex items-center sticky top-0">
+    <div className="w-full group h-fit">
+      <div className="max-w-[1340px]  py-[10px]  justify-between z-10 h-[78.8px] mx-auto w-[90%] flex items-center sticky top-0">
         <div className="w-fit flex items-center">
           <Image
             src={Logo}
@@ -56,7 +56,7 @@ const Navbar = ({ hasScrolled }) => {
       {/* Mobile Menu */}
 
       <div
-        className={`bg-white translate-y-0 small-lg:hidden  ${
+        className={`bg-white fixed top-[78.8px] translate-y-0 small-lg:hidden  ${
           !isMenuOpen && 'translate-y-[-135%]'
         }  duration-500 transition-all ease-normal w-full  py-4 h-[calc(100vh-5rem)] `}>
         <div className="w-[90%] mx-auto">
@@ -64,6 +64,17 @@ const Navbar = ({ hasScrolled }) => {
           <p className="block py-2 px-4 text-primary-text">About</p>
           <p className="block py-2 px-4 text-primary-text">Features</p>
           <p className="block py-2 px-4 text-primary-text">Pricing</p>
+          <div className="flex flex-col pt-[15px] small-sm:flex-row gap-[10px]">
+            <button className="bg-transparent hover:text-white mr-[5px] hover:bg-primary pt-[9px] pb-[8px] px-5 text-[#242424] text-[0.875rem] leading-[110%] font-medium rounded-[12px]">
+              Login
+            </button>
+            <button className="  mr-[5px] bg-gray hover:bg-secondary-gray pt-[9px] pb-[8px] px-5 text-secondary-text text-[0.875rem] leading-[110%] font-medium rounded-[12px]">
+              Talk to Sales
+            </button>
+            <button className="bg-primary text-white mr-[5px] hover:bg-secondary hover:text-secondary-text pt-[9px] pb-[8px] px-5  text-[0.875rem] leading-[110%] font-medium rounded-[12px]">
+              Get started free
+            </button>
+          </div>
         </div>
       </div>
 
