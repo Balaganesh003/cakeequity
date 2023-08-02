@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#5a38fd',
+        secondary: '#d4f717',
+        gray: '#ecf1f2',
+        'primary-text': '#545479',
+        'secondary-text': '#24244f',
+        'secondary-gray': '#cfdbde',
+      },
+
       fontFamily: {
         'CabinetGrotesk-Variable': ['CabinetGrotesk-Variable', 'sans-serif'],
         'CabinetGrotesk-Thin': ['CabinetGrotesk-Thin', 'sans-serif'],
@@ -21,6 +30,14 @@ module.exports = {
         'CabinetGrotesk-Extrabold': ['CabinetGrotesk-Extrabold', 'sans-serif'],
         'CabinetGrotesk-Black': ['CabinetGrotesk-Black', 'sans-serif'],
         sans: ['Inter', 'sans-serif'],
+      },
+
+      backgroundImage: {
+        hero: 'linear-gradient(rgba(90,56,253,.4),transparent 70%,transparent)',
+      },
+
+      screens: {
+        'small-lg': '990px',
       },
     },
   },
