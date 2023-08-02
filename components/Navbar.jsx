@@ -7,6 +7,10 @@ import WhiteHamBurger from '@/assets/burger-menu-white.svg';
 const Navbar = ({ hasScrolled }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="w-full group ">
       <div className="max-w-[1340px] py-[10px] justify-between z-10 h-[78.8px] mx-auto w-[90%] flex items-center sticky top-0">
@@ -17,7 +21,7 @@ const Navbar = ({ hasScrolled }) => {
             width={90}
             className="w-[90px] bg-transparent"
           />
-          <div className="items-center hidden small-lg:flex pl-[20px] text-[#222]  text-[0.875rem] leading-[1.3]">
+          <div className="hidden small-lg:flex pl-[20px] text-[#222]  text-[0.875rem] leading-[1.3]">
             <p className="py-[30px] px-[15px] ">Product</p>
             <p className="py-[30px] px-[15px] ">About</p>
             <p className="py-[30px] px-[15px] ">Features</p>
@@ -36,10 +40,11 @@ const Navbar = ({ hasScrolled }) => {
           </button>
         </div>
         <div
-          className={`h-[62px] w-[62px] flex items-center justify-center overflow-hidden small-lg:hidden rounded-[10px] ${
+          onClick={toggleMenu}
+          className={`h-[62px] cursor-pointer w-[62px] flex items-center justify-center overflow-hidden small-lg:hidden rounded-[10px] ${
             isMenuOpen && 'bg-primary'
           }`}>
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="">
+          <button className="">
             <Image
               src={isMenuOpen ? WhiteHamBurger : ColoredHamBurger}
               alt="logo"
@@ -48,12 +53,24 @@ const Navbar = ({ hasScrolled }) => {
           </button>
         </div>
       </div>
+      {/* Mobile Menu */}
+
+      <div
+        className={`bg-white translate-y-0 small-lg:hidden  ${
+          !isMenuOpen && 'translate-y-[-135%]'
+        }  duration-500 transition-all ease-normal w-full  py-4 h-[calc(100vh-5rem)] `}>
+        <div className="w-[90%] mx-auto">
+          <p className="block py-2 px-4 text-primary-text">Product</p>
+          <p className="block py-2 px-4 text-primary-text">About</p>
+          <p className="block py-2 px-4 text-primary-text">Features</p>
+          <p className="block py-2 px-4 text-primary-text">Pricing</p>
+        </div>
+      </div>
+
       <div
         className={`absolute transition-all duration-200 ${
-          (hasScrolled && 'opacity-[100%]') ||
-          (isMenuOpen && 'opacity-[100%]') ||
-          'group-hover:opacity-[100%]'
-        } ease-in-out top-0  opacity-0 w-full  h-[78.8px] bg-[#F2F2F2]`}></div>
+          (hasScrolled && 'opacity-[100%]') || (isMenuOpen && 'opacity-[100%]')
+        } ease-in-out top-0 opacity-0 group-hover:opacity-[100%] w-full h-[78.8px] bg-white`}></div>
     </div>
   );
 };
