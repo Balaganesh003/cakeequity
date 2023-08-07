@@ -22,10 +22,10 @@ const Navbar = ({ hasScrolled }) => {
             className="w-[90px] bg-transparent"
           />
           <div className="hidden small-lg:flex pl-[20px] text-[#222]  text-[0.875rem] leading-[1.3]">
-            <p className="py-[30px] px-[15px] ">Product</p>
-            <p className="py-[30px] px-[15px] ">About</p>
-            <p className="py-[30px] px-[15px] ">Features</p>
-            <p className="py-[30px] px-[15px] ">Pricing</p>
+            <p className="py-[30px] px-[15px] cursor-pointer ">Product</p>
+            <p className="py-[30px] px-[15px] cursor-pointer">About</p>
+            <p className="py-[30px] px-[15px] cursor-pointer">Features</p>
+            <p className="py-[30px] px-[15px] cursor-pointer">Pricing</p>
           </div>
         </div>
         <div className="hidden md:flex gap-[10px] ">
