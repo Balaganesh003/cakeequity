@@ -371,15 +371,15 @@ const CommunityClone = () => {
               </div>
               {/* Marquee ends */}
               <div className="flex flex-col text-[#1E213A] small-lg:items-end small-lg:justify-start leading-[1.7] text-[20px] gap-[24px] mt-[4rem] small-lg:mt-0 max-w-[640px] mx-auto w-full px-[5%] small-lg:px-[0%]">
-                <div className="small-lg:flex hidden text-right text-[20px]">
-                  You&lsquo;ve built a thriving community. Pallet helps you
-                  support their careers, land great new roles, and get paid, all
-                  in one product.
+                <div className="small-lg:flex hidden text-right tracking-tight text-[20px]">
+                  Embrace the revolution with our state-of-the-art Web3 Wallet.
+                  Seamlessly access blockchain applications, manage your assets,
+                  and experience true financial freedom.
                 </div>
-                <div className="small-lg:hidden flex   text-[20px]">
-                  You&lsquo;ve already done the work building a thriving
-                  community. Pallet helps you connect people who have the skills
-                  and passion with companies that are ready to hire them.
+                <div className="small-lg:hidden flex tracking-tighter  text-[20px]">
+                  Embrace the revolution with our state-of-the-art Web3 Wallet.
+                  Seamlessly access blockchain applications, manage your assets,
+                  and experience true financial freedom.
                 </div>
                 <Link href="/community" target="_blank">
                   <div className="py-1 flex gap-3 font-medium text-[20px] items-center">
