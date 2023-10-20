@@ -34,6 +34,9 @@ module.exports = {
 
       backgroundImage: {
         hero: 'linear-gradient(rgba(90,56,253,.4),transparent 70%,transparent)',
+        community:
+          'linear-gradient(to bottom, #d4f717aa 50%, transparent 100%);',
+        footer: 'linear-gradient(to top, #DD44B9 0%, transparent 100%);',
       },
 
       screens: {
@@ -44,7 +47,41 @@ module.exports = {
       transitionTimingFunction: {
         normal: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
       },
+
+      boxShadow: {
+        logocard: '0 0 0 1px rgba(255, 255, 255, 0.12)',
+      },
+
+      animation: {
+        'fade-out1': 'fade-out1 40s linear infinite',
+        'fade-out2': 'fade-out2 40s linear infinite',
+      },
+
+      keyframes: {
+        'fade-out1': {
+          '0%': { transform: 'translateX(0%)' },
+
+          '50%': { transform: 'translateX(-100%)' },
+          '50.000001%': { transform: 'translateX(100%)' },
+
+          '100%': {
+            transform: 'translateX(0%)',
+          },
+        },
+        'fade-out2': {
+          '0%': {
+            transform: 'translateX(0%)',
+          },
+          '100%': {
+            transform: 'translateX(-200%)',
+          },
+        },
+      },
+      gridTemplateColumns: {
+        '1/2': '1.5fr 1fr',
+        auto: 'auto 1fr',
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 };

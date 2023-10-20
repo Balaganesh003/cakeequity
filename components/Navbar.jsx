@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from '@/assets/Cake-Logotype-Black.png';
+import Logo from '@/assets/dragon.png';
 import Image from 'next/image';
 import ColoredHamBurger from '@/assets/burger-menu-colored.svg';
 import WhiteHamBurger from '@/assets/burger-menu-white.svg';
@@ -11,32 +11,35 @@ const Navbar = ({ hasScrolled }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const downloadWallet = () => {
+    window.open(
+      '',
+      '_blank' // <- This is what makes it open in a new window.
+    );
+  };
+
   return (
-    <div className="w-full group h-fit">
+    <div className="w-full group h-fit fixed top-0">
       <div className="max-w-[1340px]  py-[10px]  justify-between z-10 h-[78.8px] mx-auto w-[90%] flex items-center sticky top-0">
         <div className="w-fit flex items-center">
           <Image
             src={Logo}
             alt="logo"
             width={90}
-            className="w-[90px] bg-transparent"
+            className="w-[80px] bg-transparent"
           />
           <div className="hidden small-lg:flex pl-[20px] text-[#222]  text-[0.875rem] leading-[1.3]">
-            <p className="py-[30px] px-[15px] cursor-pointer ">Product</p>
-            <p className="py-[30px] px-[15px] cursor-pointer">About</p>
-            <p className="py-[30px] px-[15px] cursor-pointer">Features</p>
-            <p className="py-[30px] px-[15px] cursor-pointer">Pricing</p>
+            <span className="text-[2rem] font-bold leading-10">DinoWallet</span>
           </div>
         </div>
         <div className="hidden md:flex gap-[10px] ">
-          <button className="bg-transparent hover:text-white mr-[5px] hover:bg-primary pt-[9px] pb-[8px] px-5 text-[#242424] text-[0.875rem] leading-[110%] font-medium rounded-[12px]">
-            Login
-          </button>
           <button className="  mr-[5px] bg-gray hover:bg-secondary-gray pt-[9px] pb-[8px] px-5 text-secondary-text text-[0.875rem] leading-[110%] font-medium rounded-[12px]">
             Talk to Sales
           </button>
-          <button className="bg-primary text-white mr-[5px] hover:bg-secondary hover:text-secondary-text pt-[9px] pb-[8px] px-5  text-[0.875rem] leading-[110%] font-medium rounded-[12px]">
-            Get started free
+          <button
+            onClick={downloadWallet}
+            className="bg-primary text-white mr-[5px] hover:bg-secondary hover:text-secondary-text pt-[9px] pb-[8px] px-5  text-[0.875rem] leading-[110%] font-medium rounded-[12px]">
+            Download Wallet
           </button>
         </div>
         <div
@@ -65,14 +68,11 @@ const Navbar = ({ hasScrolled }) => {
           <p className="block py-2 px-4 text-primary-text">Features</p>
           <p className="block py-2 px-4 text-primary-text">Pricing</p>
           <div className="flex flex-col pt-[15px] small-sm:flex-row gap-[10px]">
-            <button className="bg-transparent hover:text-white mr-[5px] hover:bg-primary pt-[9px] pb-[8px] px-5 text-[#242424] text-[0.875rem] leading-[110%] font-medium rounded-[12px]">
-              Login
-            </button>
             <button className="  mr-[5px] bg-gray hover:bg-secondary-gray pt-[9px] pb-[8px] px-5 text-secondary-text text-[0.875rem] leading-[110%] font-medium rounded-[12px]">
               Talk to Sales
             </button>
             <button className="bg-primary text-white mr-[5px] hover:bg-secondary hover:text-secondary-text pt-[9px] pb-[8px] px-5  text-[0.875rem] leading-[110%] font-medium rounded-[12px]">
-              Get started free
+              Download Wallet
             </button>
           </div>
         </div>
