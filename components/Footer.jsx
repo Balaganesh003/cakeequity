@@ -16,7 +16,7 @@ const Footer = () => {
                 className="w-[80px] bg-transparent"
               />
               <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                DinoWallet
+                Dino
               </span>
             </a>
           </div>
@@ -28,7 +28,7 @@ const Footer = () => {
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                   <a href="https://flowbite.com/" class="hover:underline">
-                    DinoWallet
+                    Dino
                   </a>
                 </li>
                 <li>
@@ -83,7 +83,7 @@ const Footer = () => {
           <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{' '}
             <a href="https://flowbite.com/" class="hover:underline">
-              DinoWallet
+              Dino
             </a>
             . All Rights Reserved.
           </span>

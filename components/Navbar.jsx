@@ -29,7 +29,7 @@ const Navbar = ({ hasScrolled }) => {
             className="w-[80px] bg-transparent"
           />
           <div className="hidden small-lg:flex pl-[20px] text-[#222]  text-[0.875rem] leading-[1.3]">
-            <span className="text-[2rem] font-bold leading-10">DinoWallet</span>
+            <span className="text-[2rem] font-bold leading-10">Dino</span>
           </div>
         </div>
         <div className="hidden md:flex gap-[10px] ">
