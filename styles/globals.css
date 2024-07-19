@@ -93,22 +93,33 @@ body {
   );
 }
 
-.loader {
+div,
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.loader-spin {
   width: 22px;
   height: 22px;
-  border: 3px solid #cecece;
+  border: 3px solid #cecece !important;
   border-radius: 50%;
   position: relative;
   transform: rotate(45deg);
   box-sizing: border-box;
 }
-.loader::before {
+
+.loader-spin::before {
   content: '';
   position: absolute;
   box-sizing: border-box;
   inset: -2.8px;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid #fff !important;
   animation: prixClipFix 2s linear;
   animation-delay: 0.8s;
 }
@@ -133,14 +144,4 @@ body {
   100% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
   }
-}
-
-div,
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-html {
-  scroll-behavior: smooth;
 }

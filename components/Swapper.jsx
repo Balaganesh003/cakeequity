@@ -113,7 +113,7 @@ const Swapper = () => {
                 <button
                   onClick={() => setActive(item.id)}
                   key={item.id}
-                  className={`text-[1.125rem] flex justify-start items-center font-semibold font-CabinetGrotesk-Medium px-5 py-[14px] border rounded-[10px] leading-[1.125rem]  relative  ${
+                  className={`text-[1.125rem] relative flex justify-start items-center font-semibold font-CabinetGrotesk-Medium px-5 py-[14px] border rounded-[10px] leading-[1.125rem]    ${
                     active === item.id
                       ? 'text-white bg-[#C9F270] border-[#C9F270]'
                       : 'text-[#24244f]  border-[#d9d9d9]'
@@ -121,7 +121,7 @@ const Swapper = () => {
                   <span
                     src={SpinnerLogo}
                     alt="spinner"
-                    className={`loader absolute left-[0px] top-1/2 -translate-y-1/2   transition-all duration-1000 h-[1.5rem] inline-block mr-4 ${
+                    className={`loader-spin absolute left-[0px] top-1/2 -translate-y-1/2   transition-all duration-1000 h-[1.5rem] inline-block mr-4  ${
                       active === item.id ? 'animate-fade-in' : 'hidden'
                     }`}
                   />

@@ -55,6 +55,8 @@ module.exports = {
       animation: {
         'fade-out1': 'fade-out1 40s linear infinite',
         'fade-out2': 'fade-out2 40s linear infinite',
+        'fade-out-in': 'fade-out-in 4s ease-in-out',
+        'fade-in': 'fade-in 4s ease-in-out ',
       },
 
       keyframes: {
@@ -75,6 +77,21 @@ module.exports = {
           '100%': {
             transform: 'translateX(-200%)',
           },
+        },
+        'fade-out-in': {
+          '0%': { transform: 'translateX(-36px)' },
+          '10%': { transform: 'translateX(0px)' },
+          '82%': { transform: 'translateX(0px)' },
+          '95%': { transform: 'translateX(-42px)' },
+          '100%': { transform: 'translateX(-42px)' },
+        },
+        'fade-in': {
+          '0%': { opacity: 0 },
+          '21%': { opacity: 0 },
+          '25%': { opacity: 1 },
+          '80%': { opacity: 1 },
+          '80.1%': { opacity: 0 },
+          '100%': { opacity: 0 },
         },
       },
       gridTemplateColumns: {
